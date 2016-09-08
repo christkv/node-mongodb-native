@@ -213,7 +213,7 @@ retrieves 10 elements starting from 20
 
 ### Sorting
 
-Sorting can be acieved with option parameter `sort` which takes an array of sort preferences
+Sorting can be achieved with option parameter `sort` which takes an array of sort preferences
 
     {
         "sort": [['field1','asc'], ['field2','desc']]
