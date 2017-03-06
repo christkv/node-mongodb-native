@@ -59,10 +59,10 @@ Where
 
 There are several option values that can be used with an update
 
-  * `safe` - run callback only after the update is done, defaults to false
-  * `multi` - update all records that match the query object, default is false (only the first one found is updated)
-  * `upsert` - if true and no records match the query, insert `update` as a new record 
-  * `raw` - driver returns updated document as bson binary Buffer, `default:false`
+  * `safe` - run callback only after the update is done (default: `false`)
+  * `multi` - update all records that match the query object, default is false (default: `false` — only the first one found is updated)
+  * `upsert` - if true and no records match the query, insert `update` as a new record (default: `false`)
+  * `raw` - driver returns updated document as bson binary Buffer (default: `false`)
 
 ### Replacement object
 
@@ -92,13 +92,13 @@ Where
   * `options` define the behavior of the function
   * `callback` is the function to run after the update is done. Has two parameters - error object (if error occured) and the record that was updated.
  
-### Options
+### Find and Modify options
 
 Options object can be used for the following options:
 
-  * `remove` - if set to true (default is false), removes the record from the collection. Callback function still gets the object but it doesn't exist in the collection any more.
-  * `new` - if set to true, callback function returns the modified record. Default is false (original record is returned)
-  * `upsert` - if set to true and no record matched to the query, replacement object is inserted as a new record
+  * `remove` - if set to true removes the record from the collection. Callback function still gets the object but it doesn't exist in the collection any more (default: `false`)
+  * `new` - if set to true, callback function returns the modified record. Default is false (default: `false` — original record is returned)
+  * `upsert` - if set to true and no record matched to the query, replacement object is inserted as a new record (default: `false`)
   
 ### Example
 
